@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://langonginc.github.io</id>
     <title>5+1Center-博客</title>
-    <updated>2020-03-10T06:27:29.261Z</updated>
+    <updated>2020-03-10T06:31:16.240Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://langonginc.github.io"/>
     <link rel="self" href="https://langonginc.github.io/atom.xml"/>
@@ -10,13 +10,6 @@
     <logo>https://langonginc.github.io/images/avatar.png</logo>
     <icon>https://langonginc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 5+1Center-博客</rights>
-    <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>https://langonginc.github.io/post/test/</id>
-        <link href="https://langonginc.github.io/post/test/">
-        </link>
-        <updated>2020-03-10T06:27:15.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[洛谷P5658]]></title>
         <id>https://langonginc.github.io/post/luogu-p5658/</id>
