@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>洛谷AT886 | 5+1Center-博客</title>
+<title>撞FuFu | 5+1Center-博客</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -28,14 +28,14 @@
 
 
 
-    <meta name="description" content="题意
-题目
-stove，他是一个矿工，他现在有7天挖矿时间
-然后他有两个地方可以挖矿，沙漠的矿山和平原的矿山
-第一行，输入7个数代表再第i天如果在沙漠的矿山拿到的工资
-第二行，输入7个数代表再第i天如果在平原的矿山拿到的工资
-问stove最..." />
-    <meta name="keywords" content="洛谷,题解" />
+    <meta name="description" content="撞FuFu
+下载方式
+立即下载Zff-Linux4.0
+立即下载Zff-Windows4.0
+撞FuFu 更新日志
+2020年 2月22日 ZFF-Windows4.0开始公开测试
+2020年 2月22日 ZFF-Linux4.0开始公开测..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -106,95 +106,35 @@ stove，他是一个矿工，他现在有7天挖矿时间
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">洛谷AT886</h2>
+            <h2 class="post-title">撞FuFu</h2>
             <div class="post-date">2020-03-10</div>
             
             <div class="post-content" v-pre>
-              <h1 id="题意">题意</h1>
-<h3 id="题目">题目</h3>
-<p><strong>stove，他是一个矿工，他现在有7天挖矿时间</strong></p>
-<p><strong>然后他有两个地方可以挖矿，沙漠的矿山和平原的矿山</strong></p>
-<p><strong>第一行，输入7个数代表再第i天如果在沙漠的矿山拿到的工资</strong></p>
-<p><strong>第二行，输入7个数代表再第i天如果在平原的矿山拿到的工资</strong></p>
-<p><strong>问stove最多可以赚多少钱？</strong></p>
-<h3 id="题目再翻译">题目再翻译</h3>
-<p>stove有7天，他每天都可以去一个地方挖矿。</p>
-<h3 id="样例输入">样例输入</h3>
-<p>第一行：  输入7个数代表第 i 天1号矿井的工资</p>
-<p>第二行：  输入7个数代表第 i 天2号矿井的工资</p>
-<h3 id="样例输出">样例输出</h3>
-<p>一行：   stove最多可以赚取多少钱</p>
-<h1 id="思路">思路</h1>
-<p>在每一天的工资中取最大值，并累加到 sum 中，再输出sum</p>
-<h1 id="实际操作">实际操作</h1>
-<p>思路是不错的，可是脑子不够快！可能是当时有点仓促，结果 WA 咧！</p>
-<p>面对 WA 最有效的方法就是重写一遍！</p>
-<!-- more -->
-<p>就这样，我又写了一遍……</p>
-<p>AC了！</p>
-<h3 id="预处理">预处理</h3>
-<p>a是存储1号矿井的工资的，b是存储2号矿井的工资，sum是累加的总工资</p>
-<pre><code class="language-cpp">int a[8],b[8],sum=0;
+              <h1 id="撞fufu">撞FuFu</h1>
+<h3 id="下载方式">下载方式</h3>
+<p><a href="https://github.com/langonginc/zff/releases/download/Linux4.0/FuFu-Linux4.0.zip" download="download=LanGong-Zff-Linux4.0">立即下载Zff-Linux4.0</a><br>
+<a href="https://github.com/langonginc/zff/releases/download/Windows4.0/FuFu-Windows4.0.zip" download="download=LanGong-Zff-Windows4.0">立即下载Zff-Windows4.0</a></p>
+<h3 id="撞fufu-更新日志">撞FuFu 更新日志</h3>
+<pre><code>2020年 2月22日 ZFF-Windows4.0开始公开测试
+2020年 2月22日 ZFF-Linux4.0开始公开测试
+2020年 2月20日 ZFF3.1正式上线
+2020年 2月 1日 ZFF3.1正在测试
+2020年 1月10日 ZFF3.0正式版上线
 </code></pre>
-<h3 id="输入处理">输入处理</h3>
-<pre><code class="language-cpp">for(int i=1;i&lt;8;i++){
-    cin&gt;&gt;a[i];
-}
-for(int i=1;i&lt;8;i++){
-    cin&gt;&gt;b[i];
-}
-</code></pre>
-<h3 id="计算最大工资">计算最大工资</h3>
-<p>求每天的1号矿井的工资与二号矿井的工资的最大值</p>
-<pre><code class="language-cpp">for(int i=1;i&lt;8;i++){
-    sum+=max(a[i],b[i]);
-}
-</code></pre>
-<h3 id="提示">提示</h3>
-<p>比大小函数最好自己写。</p>
-<pre><code class="language-cpp">#define max(a,b) (((a)&gt;(b))?(a):(b))
-</code></pre>
-<p>不完全等价于</p>
-<pre><code class="language-cpp">int max(int a,int b){
-    return a&gt;b?a:b;
-}
-</code></pre>
-<p>define的可以支持所有类型的数；<br>
-max只能是单一类型，并且define比max速度快！</p>
-<h3 id="完整代码">完整代码</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-using namespace std;
-#define max(a,b) (((a)&gt;(b))?(a):(b))
-int a[8],b[8],sum=0;
-int main(){
-    for(int i=1;i&lt;8;i++){
-        cin&gt;&gt;a[i];
-    }
-    for(int i=1;i&lt;8;i++){
-        cin&gt;&gt;b[i];
-    }
-    for(int i=1;i&lt;8;i++){
-        sum+=max(a[i],b[i]);
-    }
-    cout&lt;&lt;sum&lt;&lt;endl;
-    return 0;
-}
-</code></pre>
+<h3 id="wiki">Wiki</h3>
+<p><a href="https://github.com/langonginc/zff/wiki/">Wiki</a></p>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://langonginc.github.io/tag/YlXDdjkz3/" class="tag">
-                    洛谷
-                  </a>
-                
-                  <a href="https://langonginc.github.io/tag/BbxJhrKF6s/" class="tag">
-                    题解
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://langonginc.github.io/post/luogu-p5658/">
+                  <h3 class="post-title">
+                    洛谷P5658
+                  </h3>
+                </a>
+              </div>
             
 
             
