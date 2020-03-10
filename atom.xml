@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://langonginc.github.io</id>
+    <id>https://fiveplusone516.github.io</id>
     <title>5+1Center-博客</title>
-    <updated>2020-03-10T12:48:27.240Z</updated>
+    <updated>2020-03-10T13:21:30.646Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://langonginc.github.io"/>
-    <link rel="self" href="https://langonginc.github.io/atom.xml"/>
+    <link rel="alternate" href="https://fiveplusone516.github.io"/>
+    <link rel="self" href="https://fiveplusone516.github.io/atom.xml"/>
     <subtitle>Copyright 2020 5+1Center-官方网站</subtitle>
-    <logo>https://langonginc.github.io/images/avatar.png</logo>
-    <icon>https://langonginc.github.io/favicon.ico</icon>
+    <logo>https://fiveplusone516.github.io/images/avatar.png</logo>
+    <icon>https://fiveplusone516.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 5+1Center-博客</rights>
     <entry>
         <title type="html"><![CDATA[撞FuFu]]></title>
-        <id>https://langonginc.github.io/post/noname/</id>
-        <link href="https://langonginc.github.io/post/noname/">
+        <id>https://fiveplusone516.github.io/post/noname/</id>
+        <link href="https://fiveplusone516.github.io/post/noname/">
         </link>
         <updated>2020-03-10T11:21:35.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[洛谷P5658]]></title>
-        <id>https://langonginc.github.io/post/luogu-p5658/</id>
-        <link href="https://langonginc.github.io/post/luogu-p5658/">
+        <id>https://fiveplusone516.github.io/post/luogu-p5658/</id>
+        <link href="https://fiveplusone516.github.io/post/luogu-p5658/">
         </link>
         <updated>2020-03-10T03:48:26.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[洛谷AT886]]></title>
-        <id>https://langonginc.github.io/post/luogu-at886/</id>
-        <link href="https://langonginc.github.io/post/luogu-at886/">
+        <id>https://fiveplusone516.github.io/post/luogu-at886/</id>
+        <link href="https://fiveplusone516.github.io/post/luogu-at886/">
         </link>
         <updated>2020-03-10T03:22:40.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="题意">题意</h1>
