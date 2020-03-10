@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://langonginc.github.io</id>
     <title>5+1Center-博客</title>
-    <updated>2020-03-10T03:49:48.729Z</updated>
+    <updated>2020-03-10T04:02:15.539Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://langonginc.github.io"/>
     <link rel="self" href="https://langonginc.github.io/atom.xml"/>
@@ -16,144 +16,6 @@
         <link href="https://langonginc.github.io/post/luogu-p5658/">
         </link>
         <updated>2020-03-10T03:48:26.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="题目"><strong>题目：</strong></h1>
-<h2 id="1本题中合法括号串的定义如下">1.本题中合法括号串的定义如下：</h2>
-<p><strong>()</strong> 是合法括号串。</p>
-<p>如果 A 是合法括号串，则 (A) 是合法括号串。</p>
-<p>如果 A，B 是合法括号串，则 AB 是合法括号串。</p>
-<h2 id="2本题中子串与不同的子串的定义如下">2.本题中子串与不同的子串的定义如下：</h2>
-<p>字符串  <em>S</em>  的子串是  <em>S</em>  中连续的任意个字符组成的字符串。</p>
-<p>S 的子串可用起始位置 ll 与终止位置 rr 来表示，记为</p>
-<p><em>S (l, r)S(l,r)</em></p>
-<p><em>( 1 \leq l \leq r \leq |S |1≤l≤r≤∣S∣，|S |∣S∣ 表示 S 的长度）。</em></p>
-<p>S 的两个子串视作不同当且仅当它们在 S 中的位置不同，即 ll 不同或 rr 不同。</p>
-<p>以上都是废话，了解即可……</p>
-<h2 id="3注意">3.注意：</h2>
-<p>必须开 <strong>longlong</strong></p>
-<p><strong>longlong</strong> 最好写它：</p>
-<pre><code class="language-cpp">using namespace std;
-typedef long long ll;
-</code></pre>
-<p>能让长长的 <strong>longlong</strong> 就写 <strong>ll</strong> 例如：</p>
-<pre><code class="language-cpp">ll a;
-</code></pre>
-<h1 id="讲解题">讲解题：</h1>
-<h4 id="题目-2">题目：</h4>
-<p>一个大小为 nn 的树包含 nn 个结点和 n − 1n−1 条边，每条边连接两个结点，<strong>且任意两个结点间有且仅有一条简单路径互相可达。</strong></p>
-<p>这代表它是 <strong>树</strong></p>
-<p>图、树我推荐用 <s>盗版</s> 链表存图：</p>
-<pre><code class="language-cpp">#include&lt;vector&gt;
-vector&lt;ll&gt;adj[inf];//声明变量
-
-adj[a].push_back(b);//将b塞到adj[a]里面的最后面的位置
-</code></pre>
-<p>如果这道题是线性的话就简单多了！（这样就不是提高组的题了）。</p>
-<h2 id="正确解法">正确解法：</h2>
-<p>跑一边 DFS 计算当前结点 u 的合法字串数量。</p>
-<pre><code class="language-cpp">void dfs(ll u,ll father,ll rem){
-	k[u]+=k[father];//起码有它父亲结点的字串的数量
-	if(s[u]=='('){
-		rem++;
-		ll save=dp[rem];//保留记录
-		dp[rem]=0;
-		for(int i=0;i&lt;adj[u].size();i++){
-			dfs(adj[u][i],u,rem);
-		}
-		dp[rem]=save;//写回原数据
-	}
-	else{
-		if(rem==0){
-			ll save=dp[0];//保留记录
-			dp[0]=0;
-			for(int i=0;i&lt;adj[u].size();i++){
-				dfs(adj[u][i],u,rem);
-			}
-			dp[0]=save;//写回原数据
-		}
-		else{
-			rem--;//回溯
-			k[u]=k[u]+dp[rem]+1;
-			ll save=dp[rem];//保留记录
-			dp[rem]++;
-			for(int i=0;i&lt;adj[u].size();i++){
-				dfs(adj[u][i],u,rem);
-			}
-			dp[rem]=save;//写回原数据
-		}
-	}
-	ans^=u*k[u];//计算异或和
-}
-</code></pre>
-<p>主函数：输入+存图（树）</p>
-<pre><code class="language-cpp">int main(){
-	scanf(&quot;%lld%s&quot;,&amp;n,(s+1));//(s+1)是读入技巧：让字符串 s 下标从1开始读
-	for(ll i=2;i&lt;=n;i++){
-		ll f;
-		scanf(&quot;%lld&quot;,&amp;f);
-		adj[f].push_back(i);//加边
-	}
-	dfs(1,0,0);//跑 DFS 
-	printf(&quot;%lld\n&quot;,ans);
-	return 0;
-}
-</code></pre>
-<h1 id="最后">最后</h1>
-<p>献上完整代码：</p>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
-#include&lt;cstdio&gt;
-using namespace std;
-typedef long long ll;
-const int inf=500005;
-ll n,dp[inf],k[inf],ans;
-char s[inf];
-vector&lt;ll&gt; adj[inf];
-void dfs(ll u,ll father,ll rem){
-	k[u]+=k[father];//起码有它父亲结点的字串的数量
-	if(s[u]=='('){
-		rem++;
-		ll save=dp[rem];//保留记录
-		dp[rem]=0;
-		for(int i=0;i&lt;adj[u].size();i++){
-			dfs(adj[u][i],u,rem);
-		}
-		dp[rem]=save;//写回原数据
-	}
-	else{
-		if(rem==0){
-			ll save=dp[0];//保留记录
-			dp[0]=0;
-			for(int i=0;i&lt;adj[u].size();i++){
-				dfs(adj[u][i],u,rem);
-			}
-			dp[0]=save;//写回原数据
-		}
-		else{
-			rem--;//回溯
-			k[u]=k[u]+dp[rem]+1;
-			ll save=dp[rem];//保留记录
-			dp[rem]++;
-			for(int i=0;i&lt;adj[u].size();i++){
-				dfs(adj[u][i],u,rem);
-			}
-			dp[rem]=save;//写回原数据
-		}
-	}
-	ans^=u*k[u];//计算异或和
-}
-int main(){
-	scanf(&quot;%lld%s&quot;,&amp;n,(s+1));//(s+1)是读入技巧：让字符串 s 下标从1开始读
-	for(ll i=2;i&lt;=n;i++){
-		ll f;
-		scanf(&quot;%lld&quot;,&amp;f);
-		adj[f].push_back(i);//加边
-	}
-	dfs(1,0,0);//跑 DFS 
-	printf(&quot;%lld\n&quot;,ans);
-	return 0;
-}
-</code></pre>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[洛谷AT886]]></title>
@@ -200,57 +62,6 @@ int main(){
 <h1 id="实际操作">实际操作</h1>
 <p>思路是不错的，可是脑子不够快！可能是当时有点仓促，结果 WA 咧！</p>
 <p>面对 WA 最有效的方法就是重写一遍！</p>
-<!-- more -->
-<p>就这样，我又写了一遍……</p>
-<p>AC了！</p>
-<h3 id="预处理">预处理</h3>
-<p>a是存储1号矿井的工资的，b是存储2号矿井的工资，sum是累加的总工资</p>
-<pre><code class="language-cpp">int a[8],b[8],sum=0;
-</code></pre>
-<h3 id="输入处理">输入处理</h3>
-<pre><code class="language-cpp">for(int i=1;i&lt;8;i++){
-    cin&gt;&gt;a[i];
-}
-for(int i=1;i&lt;8;i++){
-    cin&gt;&gt;b[i];
-}
-</code></pre>
-<h3 id="计算最大工资">计算最大工资</h3>
-<p>求每天的1号矿井的工资与二号矿井的工资的最大值</p>
-<pre><code class="language-cpp">for(int i=1;i&lt;8;i++){
-    sum+=max(a[i],b[i]);
-}
-</code></pre>
-<h3 id="提示">提示</h3>
-<p>比大小函数最好自己写。</p>
-<pre><code class="language-cpp">#define max(a,b) (((a)&gt;(b))?(a):(b))
-</code></pre>
-<p>不完全等价于</p>
-<pre><code class="language-cpp">int max(int a,int b){
-    return a&gt;b?a:b;
-}
-</code></pre>
-<p>define的可以支持所有类型的数；<br>
-max只能是单一类型，并且define比max速度快！</p>
-<h3 id="完整代码">完整代码</h3>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-using namespace std;
-#define max(a,b) (((a)&gt;(b))?(a):(b))
-int a[8],b[8],sum=0;
-int main(){
-    for(int i=1;i&lt;8;i++){
-        cin&gt;&gt;a[i];
-    }
-    for(int i=1;i&lt;8;i++){
-        cin&gt;&gt;b[i];
-    }
-    for(int i=1;i&lt;8;i++){
-        sum+=max(a[i],b[i]);
-    }
-    cout&lt;&lt;sum&lt;&lt;endl;
-    return 0;
-}
-</code></pre>
 ]]></content>
     </entry>
 </feed>
