@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>洛谷P5658 | 5+1Center-博客</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
+<link rel="shortcut icon" href="https://langonginc.github.io/favicon.ico?v=1583812170382">
+<link rel="stylesheet" href="https://langonginc.github.io/styles/main.css">
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="题目：
+1.本题中合法括号串的定义如下：
+() 是合法括号串。
+如果 A 是合法括号串，则 (A) 是合法括号串。
+如果 A，B 是合法括号串，则 AB 是合法括号串。
+2.本题中子串与不同的子串的定义如下：
+字符串  S  的子串是  S..." />
+    <meta name="keywords" content="洛谷,题解" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://langonginc.github.io">
+        <img src="https://langonginc.github.io/images/avatar.png?v=1583812170382" class="site-logo">
+        <h1 class="site-title">5+1Center-博客</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      5+1
+    </div>
+    <div class="site-footer">
+      Powered by <a href="victorwoo.synology.me:8980" target="_blank">516Center</a> | <a class="rss" href="https://langonginc.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">洛谷P5658</h2>
+            <div class="post-date">2020-03-10</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="题目"><strong>题目：</strong></h1>
+<h2 id="1本题中合法括号串的定义如下">1.本题中合法括号串的定义如下：</h2>
+<p><strong>()</strong> 是合法括号串。</p>
+<p>如果 A 是合法括号串，则 (A) 是合法括号串。</p>
+<p>如果 A，B 是合法括号串，则 AB 是合法括号串。</p>
+<h2 id="2本题中子串与不同的子串的定义如下">2.本题中子串与不同的子串的定义如下：</h2>
+<p>字符串  <em>S</em>  的子串是  <em>S</em>  中连续的任意个字符组成的字符串。</p>
+<p>S 的子串可用起始位置 ll 与终止位置 rr 来表示，记为</p>
+<p><em>S (l, r)S(l,r)</em></p>
+<p><em>( 1 \leq l \leq r \leq |S |1≤l≤r≤∣S∣，|S |∣S∣ 表示 S 的长度）。</em></p>
+<p>S 的两个子串视作不同当且仅当它们在 S 中的位置不同，即 ll 不同或 rr 不同。</p>
+<p>以上都是废话，了解即可……</p>
+<h2 id="3注意">3.注意：</h2>
+<p>必须开 <strong>longlong</strong></p>
+<p><strong>longlong</strong> 最好写它：</p>
+<pre><code class="language-cpp">using namespace std;
+typedef long long ll;
+</code></pre>
+<p>能让长长的 <strong>longlong</strong> 就写 <strong>ll</strong> 例如：</p>
+<pre><code class="language-cpp">ll a;
+</code></pre>
+<h1 id="讲解题">讲解题：</h1>
+<h4 id="题目-2">题目：</h4>
+<p>一个大小为 nn 的树包含 nn 个结点和 n − 1n−1 条边，每条边连接两个结点，<strong>且任意两个结点间有且仅有一条简单路径互相可达。</strong></p>
+<p>这代表它是 <strong>树</strong></p>
+<p>图、树我推荐用 <s>盗版</s> 链表存图：</p>
+<pre><code class="language-cpp">#include&lt;vector&gt;
+vector&lt;ll&gt;adj[inf];//声明变量
+
+adj[a].push_back(b);//将b塞到adj[a]里面的最后面的位置
+</code></pre>
+<p>如果这道题是线性的话就简单多了！（这样就不是提高组的题了）。</p>
+<h2 id="正确解法">正确解法：</h2>
+<p>跑一边 DFS 计算当前结点 u 的合法字串数量。</p>
+<pre><code class="language-cpp">void dfs(ll u,ll father,ll rem){
+	k[u]+=k[father];//起码有它父亲结点的字串的数量
+	if(s[u]=='('){
+		rem++;
+		ll save=dp[rem];//保留记录
+		dp[rem]=0;
+		for(int i=0;i&lt;adj[u].size();i++){
+			dfs(adj[u][i],u,rem);
+		}
+		dp[rem]=save;//写回原数据
+	}
+	else{
+		if(rem==0){
+			ll save=dp[0];//保留记录
+			dp[0]=0;
+			for(int i=0;i&lt;adj[u].size();i++){
+				dfs(adj[u][i],u,rem);
+			}
+			dp[0]=save;//写回原数据
+		}
+		else{
+			rem--;//回溯
+			k[u]=k[u]+dp[rem]+1;
+			ll save=dp[rem];//保留记录
+			dp[rem]++;
+			for(int i=0;i&lt;adj[u].size();i++){
+				dfs(adj[u][i],u,rem);
+			}
+			dp[rem]=save;//写回原数据
+		}
+	}
+	ans^=u*k[u];//计算异或和
+}
+</code></pre>
+<p>主函数：输入+存图（树）</p>
+<pre><code class="language-cpp">int main(){
+	scanf(&quot;%lld%s&quot;,&amp;n,(s+1));//(s+1)是读入技巧：让字符串 s 下标从1开始读
+	for(ll i=2;i&lt;=n;i++){
+		ll f;
+		scanf(&quot;%lld&quot;,&amp;f);
+		adj[f].push_back(i);//加边
+	}
+	dfs(1,0,0);//跑 DFS 
+	printf(&quot;%lld\n&quot;,ans);
+	return 0;
+}
+</code></pre>
+<h1 id="最后">最后</h1>
+<p>献上完整代码：</p>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;cstdio&gt;
+using namespace std;
+typedef long long ll;
+const int inf=500005;
+ll n,dp[inf],k[inf],ans;
+char s[inf];
+vector&lt;ll&gt; adj[inf];
+void dfs(ll u,ll father,ll rem){
+	k[u]+=k[father];//起码有它父亲结点的字串的数量
+	if(s[u]=='('){
+		rem++;
+		ll save=dp[rem];//保留记录
+		dp[rem]=0;
+		for(int i=0;i&lt;adj[u].size();i++){
+			dfs(adj[u][i],u,rem);
+		}
+		dp[rem]=save;//写回原数据
+	}
+	else{
+		if(rem==0){
+			ll save=dp[0];//保留记录
+			dp[0]=0;
+			for(int i=0;i&lt;adj[u].size();i++){
+				dfs(adj[u][i],u,rem);
+			}
+			dp[0]=save;//写回原数据
+		}
+		else{
+			rem--;//回溯
+			k[u]=k[u]+dp[rem]+1;
+			ll save=dp[rem];//保留记录
+			dp[rem]++;
+			for(int i=0;i&lt;adj[u].size();i++){
+				dfs(adj[u][i],u,rem);
+			}
+			dp[rem]=save;//写回原数据
+		}
+	}
+	ans^=u*k[u];//计算异或和
+}
+int main(){
+	scanf(&quot;%lld%s&quot;,&amp;n,(s+1));//(s+1)是读入技巧：让字符串 s 下标从1开始读
+	for(ll i=2;i&lt;=n;i++){
+		ll f;
+		scanf(&quot;%lld&quot;,&amp;f);
+		adj[f].push_back(i);//加边
+	}
+	dfs(1,0,0);//跑 DFS 
+	printf(&quot;%lld\n&quot;,ans);
+	return 0;
+}
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://langonginc.github.io/tag/YlXDdjkz3/" class="tag">
+                    洛谷
+                  </a>
+                
+                  <a href="https://langonginc.github.io/tag/BbxJhrKF6s/" class="tag">
+                    题解
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://langonginc.github.io/post/luogu-at886/">
+                  <h3 class="post-title">
+                    洛谷AT886
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
