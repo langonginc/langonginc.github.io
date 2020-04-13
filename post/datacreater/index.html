@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Hello Gridea | LanGong</title>
+<title>DataCreater | LanGong</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -28,15 +28,24 @@
 
 
 
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...
+    <meta name="description" content="DataCreater1.0
 
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdo..." />
-    <meta name="keywords" content="Gridea" />
+「DataCreater」是由LanGongINC开发的数据生成软件，适用于生成c++/c语言题目的数据。
+
+更新日志
+
+
+
+更新日期
+版本
+更新内容
+
+
+
+
+2020 04 09
+DataCreater1...." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -107,45 +116,58 @@ Gridea 主页
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Hello Gridea</h2>
-            <div class="post-date">2018-12-12</div>
+            <h2 class="post-title">DataCreater</h2>
+            <div class="post-date">2020-04-13</div>
             
-              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/hello-gridea.png')">
+              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/datacreater.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+              <h1 id="datacreater10">DataCreater1.0</h1>
+<blockquote>
+<p>「DataCreater」是由LanGongINC开发的数据生成软件，适用于生成c++/c语言题目的数据。</p>
+</blockquote>
+<h1 id="更新日志">更新日志</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">更新日期</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">更新内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2020 04 09</td>
+<td style="text-align:center">DataCreater1.0</td>
+<td style="text-align:center">完善DataCreater</td>
+</tr>
+</tbody>
+</table>
+<h1 id="如何使用-datacreater">如何使用 DataCreater</h1>
+<ol>
+<li>将<code>head.hpp</code>中的<code>filename</code>数组赋予您希望生成数据后的文件名</li>
+<li>将您要生成数据的c++代码复制到<code>creat_out.hpp</code>中，并将<code>main</code>函数改名为<code>creat_output</code></li>
+<li>将您要生成数据的代码的输入部分放到<code>creat_in.hpp</code>中，并将输入语句改为输出语句</li>
+<li>将<code>creat_in.hpp</code>中所要输出（原输入部分）的变量赋予随机数，我们为您提供随机数函数<code>maxrand()</code>、<code>betrand()</code>。</li>
+</ol>
+<h1 id="随机数函数">随机数函数</h1>
+<h2 id="maxrandint-high">maxrand(int high)</h2>
+<p>您需要填写参数high，代表最大是多少，maxrand将返回一个小于high的<code>int</code>整数。</p>
+<h2 id="betrandint-lowint-high">betrand(int low,int high)</h2>
+<p>您需要填写参数low和high，分别代表最小数、最大数，betrand将返回一个大于low且小于high的<code>int</code>整数。</p>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://langonginc.github.io/tag/FV08M_oHP/" class="tag">
-                    Gridea
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://langonginc.github.io/post/zff/">
+                  <h3 class="post-title">
+                    撞FuFu
+                  </h3>
+                </a>
+              </div>
             
 
             
