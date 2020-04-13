@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>DataCreater | LanGong</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
+<link rel="shortcut icon" href="https://langonginc.github.io/favicon.ico?v=1586760194090">
+<link rel="stylesheet" href="https://langonginc.github.io/styles/main.css">
+
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+
+
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="DataCreater1.0
+
+「DataCreater」是由LanGongINC开发的数据生成软件，适用于生成c++/c语言题目的数据。
+
+更新日志
+
+
+
+更新日期
+版本
+更新内容
+
+
+
+
+2020 04 09
+DataCreater1...." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://langonginc.github.io">
+        <img src="https://langonginc.github.io/images/avatar.png?v=1586760194090" class="site-logo">
+        <h1 class="site-title">LanGong</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            文档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/langonginc/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      &copy; 2020 LanGongINC
+    </div>
+    <div class="site-footer">
+      Powered by <a href="/" target="_blank">LanGongINC</a> | <a class="rss" href="https://langonginc.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">DataCreater</h2>
+            <div class="post-date">2020-04-13</div>
+            
+              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/datacreater.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="datacreater10">DataCreater1.0</h1>
+<blockquote>
+<p>「DataCreater」是由LanGongINC开发的数据生成软件，适用于生成c++/c语言题目的数据。</p>
+</blockquote>
+<h1 id="更新日志">更新日志</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">更新日期</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">更新内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2020 04 09</td>
+<td style="text-align:center">DataCreater1.0</td>
+<td style="text-align:center">完善DataCreater</td>
+</tr>
+</tbody>
+</table>
+<h1 id="如何使用-datacreater">如何使用 DataCreater</h1>
+<ol>
+<li>将<code>head.hpp</code>中的<code>filename</code>数组赋予您希望生成数据后的文件名</li>
+<li>将您要生成数据的c++代码复制到<code>creat_out.hpp</code>中，并将<code>main</code>函数改名为<code>creat_output</code></li>
+<li>将您要生成数据的代码的输入部分放到<code>creat_in.hpp</code>中，并将输入语句改为输出语句</li>
+<li>将<code>creat_in.hpp</code>中所要输出（原输入部分）的变量赋予随机数，我们为您提供随机数函数<code>maxrand()</code>、<code>betrand()</code>。</li>
+</ol>
+<h1 id="随机数函数">随机数函数</h1>
+<h2 id="maxrandint-high">maxrand(int high)</h2>
+<p>您需要填写参数high，代表最大是多少，maxrand将返回一个小于high的<code>int</code>整数。</p>
+<h2 id="betrandint-lowint-high">betrand(int low,int high)</h2>
+<p>您需要填写参数low和high，分别代表最小数、最大数，betrand将返回一个大于low且小于high的<code>int</code>整数。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://langonginc.github.io/post/zff/">
+                  <h3 class="post-title">
+                    撞FuFu
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '3b231fdfde2416a4d51b',
+        clientSecret: '676608bbbc5c785b4c43cda90a86cd84550d046e',
+        repo: 'langonginc.github.io',
+        owner: 'langonginc',
+        admin: ['langonginc'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
