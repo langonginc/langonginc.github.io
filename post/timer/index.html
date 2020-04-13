@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | LanGong</title>
+<title>Timer | LanGong</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -16,13 +16,27 @@
 
 
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css" />
+  
+
+  
+
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
-    <meta name="description" content="&amp;copy; 2020 LanGongINC">
+    <meta name="description" content="
+Timer是由LanGong开发组开发的桌面时钟应用程序
+
+使用方法
+您必须先安装git这个软件包。
+1. 下载
+在终端命令行内输入以下命令
+git clone https://github.com/langonginc/Timer.gi..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -92,14 +106,57 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">Timer</h2>
+            <div class="post-date">2020-04-13</div>
             
-              <a class="tag" href="https://langonginc.github.io/tag/langong/">langong</a>
+              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/timer.png')">
+              </div>
             
-              <a class="tag" href="https://langonginc.github.io/tag/L6RfJrGF1/">zff</a>
+            <div class="post-content" v-pre>
+              <blockquote>
+<p>Timer是由LanGong开发组开发的桌面时钟应用程序</p>
+</blockquote>
+<h1 id="使用方法">使用方法</h1>
+<p>您必须先安装<code>git</code>这个软件包。</p>
+<h2 id="1-下载">1. 下载</h2>
+<p>在终端命令行内输入以下命令</p>
+<pre><code class="language-bash">git clone https://github.com/langonginc/Timer.git
+</code></pre>
+<h2 id="2-使用">2. 使用</h2>
+<p>在终端命令行内输入以下命令</p>
+<pre><code class="language-bash">bash ~/Timer/timer.sh
+</code></pre>
+<p>进入程序后，按照提示输入设定秒数并等待。</p>
+<h2 id="3-debug">3. Debug</h2>
+<p>Error-01：您没有输入数字</p>
+<p>Error-02：您输入的不是有效数字（在某些版本中可能不会报错）</p>
+<p>Error-254：未知错误</p>
+<p>Error-Signed：运行时错误</p>
+
+            </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://langonginc.github.io/post/datacreater/">
+                  <h3 class="post-title">
+                    DataCreater
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
           </div>
+
         </div>
       </div>
     </div>
@@ -124,6 +181,29 @@ var app = new Vue({
     hljs.initHighlightingOnLoad()
   </script>
 
+
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'c60c8d63b6da5d13a18e',
+        clientSecret: '2cd264e6ad2ab242d5c39d9a9e259a365f8bd04f',
+        repo: 'langonginc.github.io',
+        owner: 'langonginc',
+        admin: ['langonginc'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
