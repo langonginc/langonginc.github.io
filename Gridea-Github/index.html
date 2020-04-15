@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>DataCreater | LanGong</title>
+<title>Gridea GitHub 博客 | LanGong</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -28,24 +28,13 @@
 
 
 
-    <meta name="description" content="DataCreater1.0
-
-「DataCreater」是由LanGongINC开发的数据生成软件，适用于生成c++/c语言题目的数据。
-
-更新日志
-
-
-
-更新日期
-版本
-更新内容
-
-
-
-
-2020 04 09
-DataCreater1...." />
-    <meta name="keywords" content="langong" />
+    <meta name="description" content="Gridea是一个很好用的博客创建、编写的平台
+Gridea支持Markdown语法和Katex公式渲染，你可以向世界展示你的博客。
+1. 准备
+准备好Gridea和Github账户
+注： 在这里，我将以Linux版的Gridea来示范。
+..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -122,63 +111,76 @@ DataCreater1...." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">DataCreater</h2>
-            <div class="post-date">2020-04-13</div>
+            <h2 class="post-title">Gridea GitHub 博客</h2>
+            <div class="post-date">2020-04-15</div>
             
-              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/datacreater.png')">
+              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/Gridea-Github.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <h1 id="datacreater10">DataCreater1.0</h1>
-<blockquote>
-<p>「DataCreater」是由LanGongINC开发的数据生成软件，适用于生成c++/c语言题目的数据。</p>
-</blockquote>
-<h1 id="更新日志">更新日志</h1>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">更新日期</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">更新内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">2020 04 09</td>
-<td style="text-align:center">DataCreater1.0</td>
-<td style="text-align:center">完善DataCreater</td>
-</tr>
-</tbody>
-</table>
-<h1 id="如何使用-datacreater">如何使用 DataCreater</h1>
+              <h1 id="gridea是一个很好用的博客创建-编写的平台">Gridea是一个很好用的博客创建、编写的平台</h1>
+<p>Gridea支持<strong>Markdown</strong>语法和<strong>Katex</strong>公式渲染，你可以向世界展示你的博客。</p>
+<h1 id="1-准备">1. 准备</h1>
+<p>准备好Gridea和Github账户</p>
+<p>注： 在这里，我将以Linux版的Gridea来示范。</p>
+<h1 id="2-基本配置">2. 基本配置</h1>
+<p>点击Github首面右上角的<code>+</code>，选择new repository。</p>
+<p>Name填写<code>用户名.github.io</code><br>
+其它的只要选择Public即可</p>
+<p>进入<a href="https://github.com/settings/tokens">Github&gt;&gt;Setting&gt;&gt;Developer settings&gt;&gt;Personal access tokens</a>并注册一个Token</p>
 <ol>
-<li>将<code>head.hpp</code>中的<code>filename</code>数组赋予您希望生成数据后的文件名</li>
-<li>将您要生成数据的c++代码复制到<code>creat_out.hpp</code>中，并将<code>main</code>函数改名为<code>creat_output</code></li>
-<li>将您要生成数据的代码的输入部分放到<code>creat_in.hpp</code>中，并将输入语句改为输出语句</li>
-<li>将<code>creat_in.hpp</code>中所要输出（原输入部分）的变量赋予随机数，我们为您提供随机数函数<code>maxrand()</code>、<code>betrand()</code>。</li>
+<li>点击右侧的Generate new token</li>
+<li>在Note处填写你的blog名称</li>
+<li>勾选reop</li>
+<li>点击绿色的创建按钮</li>
 </ol>
-<h1 id="随机数函数">随机数函数</h1>
-<h2 id="maxrandint-high">maxrand(int high)</h2>
-<p>您需要填写参数high，代表最大是多少，maxrand将返回一个小于high的<code>int</code>整数。</p>
-<h2 id="betrandint-lowint-high">betrand(int low,int high)</h2>
-<p>您需要填写参数low和high，分别代表最小数、最大数，betrand将返回一个大于low且小于high的<code>int</code>整数。</p>
+<p>进入<a href="https://github.com/settings/developers">Github&gt;&gt;Setting&gt;&gt;Developer settings&gt;&gt;Oauth Apps</a></p>
+<ol>
+<li>创建一个新的Oauth App</li>
+<li>Application name 填写blog名称</li>
+<li>Homepage URL 填写blog地址即<code>用户名.github.io</code></li>
+<li>Application description 随意填写</li>
+<li>Authorization callback URL 填写blog地址</li>
+<li>将Client ID和Client Secret记录下来</li>
+</ol>
+<p>打开Gridea</p>
+<p>找到左侧的远程模块</p>
+<figure data-type="image" tabindex="1"><img src="http://victorwoo.synology.me:666/ImageCenter/gridea01.png" alt="Gridea Image 01" loading="lazy"></figure>
+<ol>
+<li>域名填写blog地址</li>
+<li>仓库名称填写<code>用户名.github.io</code></li>
+<li>仓库用户名就是你的用户名</li>
+<li>分支填写master即可</li>
+<li>邮箱就是你GitHub注册用的邮箱</li>
+<li>令牌填写Github的密码</li>
+<li>CNAME填写你的网址即可</li>
+</ol>
+<p>点击保存按钮</p>
+<p>再点击检测远程连接按钮</p>
+<h1 id="3-评论配置">3. 评论配置</h1>
+<p>进入Gridea&gt;&gt;远程&gt;&gt;评论。</p>
+<figure data-type="image" tabindex="2"><img src="http://victorwoo.synology.me:666/ImageCenter/gridea02.png" alt="Gridea Image 02" loading="lazy"></figure>
+<ol>
+<li>选择Gitalk</li>
+<li>填入所有信息</li>
+</ol>
+<p>点击保存按钮</p>
+<h1 id="4-上传">4. 上传</h1>
+<p>点击左侧的上传按钮</p>
+<p>等侯2分钟</p>
+<p>进入你的网页，就能看到了</p>
+<h1 id="底部信息">底部信息</h1>
+<p>由 LanGongINC 出品，禁止转载。<br>
+Made by LanGongINC, at 2020</p>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://langonginc.github.io/tag/langong/" class="tag">
-                    langong
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://langonginc.github.io/zff/">
+                <a href="https://langonginc.github.io/timer/">
                   <h3 class="post-title">
-                    撞FuFu
+                    Timer
                   </h3>
                 </a>
               </div>
