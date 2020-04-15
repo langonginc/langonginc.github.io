@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>撞FuFu | LanGong</title>
+<title>Gridea GitHub 博客 | LanGong</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -37,15 +37,13 @@
 </script>
 
 
-    <meta name="description" content="撞FuFu
-下载方式
-立即下载Zff-Linux4.1
-立即下载Zff-Linux4.0
-立即下载Zff-Windows4.0
-撞FuFu 更新日志
-2020年 3月13日 ZFF-Linux4.1正式上线
-2020年 3月10日 ZFF-..." />
-    <meta name="keywords" content="langong,zff" />
+    <meta name="description" content="Gridea是一个很好用的博客创建、编写的平台
+Gridea支持Markdown语法和Katex公式渲染，你可以向世界展示你的博客。
+1. 准备
+准备好Gridea和Github账户
+注： 在这里，我将以Linux版的Gridea来示范。
+..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -122,43 +120,76 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">撞FuFu</h2>
-            <div class="post-date">2020-03-10</div>
-            
-              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/zff.png')">
-              </div>
+            <h2 class="post-title">Gridea GitHub 博客</h2>
+            <div class="post-date">2020-04-15</div>
             
             <div class="post-content" v-pre>
-              <h1 id="撞fufu">撞FuFu</h1>
-<h3 id="下载方式">下载方式</h3>
-<p><a href="https://github.com/langonginc/zff-Linux/archive/Linux4.1.zip" download="LanGong-Zff-Linux4.1">立即下载Zff-Linux4.1</a><br>
-<a href="https://github.com/langonginc/zff/releases/download/Linux4.0/FuFu-Linux4.0.zip" download="LanGong-Zff-Linux4.0">立即下载Zff-Linux4.0</a><br>
-<a href="https://github.com/langonginc/zff/releases/download/Windows4.0/FuFu-Windows4.0.zip" download="LanGong-Zff-Windows4.0">立即下载Zff-Windows4.0</a></p>
-<h3 id="撞fufu-更新日志">撞FuFu 更新日志</h3>
-<pre><code>2020年 3月13日 ZFF-Linux4.1正式上线
-2020年 3月10日 ZFF-Windows4.0正式上线
-2020年 3月10日 ZFF-Linux4.0正式上线
-2020年 2月20日 ZFF3.1正式上线
-2020年 2月 1日 ZFF3.1正在测试
-2020年 1月10日 ZFF3.0正式版上线
-</code></pre>
-<h3 id="wiki">Wiki</h3>
-<p><a href="https://github.com/langonginc/zff/wiki/">Wiki</a></p>
+              <h1 id="gridea是一个很好用的博客创建-编写的平台">Gridea是一个很好用的博客创建、编写的平台</h1>
+<p>Gridea支持<strong>Markdown</strong>语法和<strong>Katex</strong>公式渲染，你可以向世界展示你的博客。</p>
+<h1 id="1-准备">1. 准备</h1>
+<p>准备好Gridea和Github账户</p>
+<p>注： 在这里，我将以Linux版的Gridea来示范。</p>
+<h1 id="2-基本配置">2. 基本配置</h1>
+<p>点击Github首面右上角的<code>+</code>，选择new repository。</p>
+<p>Name填写<code>用户名.github.io</code><br>
+其它的只要选择Public即可</p>
+<p>进入<a href="https://github.com/settings/tokens">Github&gt;&gt;Setting&gt;&gt;Developer settings&gt;&gt;Personal access tokens</a>并注册一个Token</p>
+<ol>
+<li>点击右侧的Generate new token</li>
+<li>在Note处填写你的blog名称</li>
+<li>勾选reop</li>
+<li>点击绿色的创建按钮</li>
+</ol>
+<p>进入<a href="https://github.com/settings/developers">Github&gt;&gt;Setting&gt;&gt;Developer settings&gt;&gt;Oauth Apps</a></p>
+<ol>
+<li>创建一个新的Oauth App</li>
+<li>Application name 填写blog名称</li>
+<li>Homepage URL 填写blog地址即<code>用户名.github.io</code></li>
+<li>Application description 随意填写</li>
+<li>Authorization callback URL 填写blog地址</li>
+<li>将Client ID和Client Secret记录下来</li>
+</ol>
+<p>打开Gridea</p>
+<p>找到左侧的远程模块</p>
+<figure data-type="image" tabindex="1"><img src="http://victorwoo.synology.me:666/ImageCenter/gridea01.png" alt="Gridea Image 01" loading="lazy"></figure>
+<ol>
+<li>域名填写blog地址</li>
+<li>仓库名称填写<code>用户名.github.io</code></li>
+<li>仓库用户名就是你的用户名</li>
+<li>分支填写master即可</li>
+<li>邮箱就是你GitHub注册用的邮箱</li>
+<li>令牌填写Github的密码</li>
+<li>CNAME填写你的网址即可</li>
+</ol>
+<p>点击保存按钮</p>
+<p>再点击检测远程连接按钮</p>
+<h1 id="3-评论配置">3. 评论配置</h1>
+<p>进入Gridea&gt;&gt;远程&gt;&gt;评论。</p>
+<figure data-type="image" tabindex="2"><img src="http://victorwoo.synology.me:666/ImageCenter/gridea02.png" alt="Gridea Image 02" loading="lazy"></figure>
+<ol>
+<li>选择Gitalk</li>
+<li>填入所有信息</li>
+</ol>
+<p>点击保存按钮</p>
+<h1 id="4-上传">4. 上传</h1>
+<p>点击左侧的上传按钮</p>
+<p>等侯2分钟</p>
+<p>进入你的网页，就能看到了</p>
+<h1 id="底部信息">底部信息</h1>
+<p>由 LanGongINC 出品，禁止转载。<br>
+Made by LanGongINC, at 2020</p>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://langonginc.github.io/tag/langong/" class="tag">
-                    langong
-                  </a>
-                
-                  <a href="https://langonginc.github.io/tag/L6RfJrGF1/" class="tag">
-                    zff
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://langonginc.github.io/timer/">
+                  <h3 class="post-title">
+                    Timer
+                  </h3>
+                </a>
+              </div>
             
 
             
