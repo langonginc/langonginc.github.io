@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
-<link rel="shortcut icon" href="https://langonginc.github.io/favicon.ico?v=1586784559060">
+<link rel="shortcut icon" href="https://langonginc.github.io/favicon.ico?v=1586922485064">
 <link rel="stylesheet" href="https://langonginc.github.io/styles/main.css">
 
 
@@ -27,15 +27,26 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163691317-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163691317-1');
+</script>
+
 
     <meta name="description" content="
-Timer是由LanGong开发组开发的桌面时钟应用程序
+Timer 是由 LanGong 开发组开发的桌面时钟应用程序
 
 使用方法
-您必须先安装git这个软件包。
+您必须先安装zip和unzip这两个软件包。
 1. 下载
-在终端命令行内输入以下命令
-git clone https://github.com/langonginc/Timer.gi..." />
+进入这个左侧的下载页面
+选择Timer并下载
+下载后在终端命令行中输入以下命令：
+# 1. **解压刚刚..." />
     <meta name="keywords" content="langong" />
   </head>
   <body>
@@ -45,7 +56,7 @@ git clone https://github.com/langonginc/Timer.gi..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://langonginc.github.io">
-        <img src="https://langonginc.github.io/images/avatar.png?v=1586784559060" class="site-logo">
+        <img src="https://langonginc.github.io/images/avatar.png?v=1586922485064" class="site-logo">
         <h1 class="site-title">LanGong</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -121,24 +132,30 @@ git clone https://github.com/langonginc/Timer.gi..." />
             
             <div class="post-content" v-pre>
               <blockquote>
-<p>Timer是由LanGong开发组开发的桌面时钟应用程序</p>
+<p>Timer 是由 LanGong 开发组开发的桌面时钟应用程序</p>
 </blockquote>
 <h1 id="使用方法">使用方法</h1>
-<p>您必须先安装<code>git</code>这个软件包。</p>
+<p>您必须先安装<code>zip</code>和<code>unzip</code>这两个软件包。</p>
 <h2 id="1-下载">1. 下载</h2>
-<p>在终端命令行内输入以下命令</p>
-<pre><code class="language-bash">git clone https://github.com/langonginc/Timer.git
+<p>进入这个左侧的下载页面</p>
+<p>选择Timer并下载</p>
+<p>下载后在终端命令行中输入以下命令：</p>
+<pre><code class="language-bash"># 1. **解压刚刚下载的zip压缩包并进入文件夹
+unzip Timer.zip
+cd Timer
+
+# 2. 安装Timer
+bash install.sh
 </code></pre>
 <h2 id="2-使用">2. 使用</h2>
-<p>在终端命令行内输入以下命令</p>
-<pre><code class="language-bash">bash ~/Timer/timer.sh
+<p>在终端命令行内输入以下命令：</p>
+<pre><code class="language-bash">bash ~/timer.sh
 </code></pre>
 <p>进入程序后，按照提示输入设定秒数并等待。</p>
 <h2 id="3-debug">3. Debug</h2>
 <p>Error-01：您没有输入数字</p>
 <p>Error-02：您输入的不是有效数字（在某些版本中可能不会报错）</p>
 <p>Error-254：未知错误</p>
-<p>Error-Signed：运行时错误</p>
 
             </div>
             
