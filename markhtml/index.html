@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Timer | LanGong</title>
+<title>MarkHtml-CH | LanGong</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -28,16 +28,13 @@
 
 
 
-    <meta name="description" content="
-Timer 是由 LanGong 开发组开发的桌面时钟应用程序
-
+    <meta name="description" content="English? Click to English Page
+MarkHTML
+这个工具可以让Markdown转换为HTML。
 使用方法
-您必须先安装zip和unzip这两个软件包。
-1. 下载
-进入这个左侧的下载页面
-选择Timer并下载
-下载后在终端命令行中输入以下命令：
-# 1. **解压刚刚..." />
+
+将解压好的文件夹命名为Markhtml
+请将你需要转换的Markdown内容放到$mark这个变量中..." />
     <meta name="keywords" content="LanGongDEV" />
   </head>
   <body>
@@ -109,38 +106,30 @@ Timer 是由 LanGong 开发组开发的桌面时钟应用程序
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Timer</h2>
-            <div class="post-date">2020-04-13</div>
+            <h2 class="post-title">MarkHtml-CH</h2>
+            <div class="post-date">2020-04-17</div>
             
-              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/timer.png')">
+              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/markhtml.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>Timer 是由 LanGong 开发组开发的桌面时钟应用程序</p>
-</blockquote>
+              <p><a href="/markhtml-en/">English? Click to English Page</a></p>
+<h1 id="markhtml">MarkHTML</h1>
+<p>这个工具可以让Markdown转换为HTML。</p>
 <h1 id="使用方法">使用方法</h1>
-<p>您必须先安装<code>zip</code>和<code>unzip</code>这两个软件包。</p>
-<h2 id="1-下载">1. 下载</h2>
-<p>进入这个左侧的下载页面</p>
-<p>选择Timer并下载</p>
-<p>下载后在终端命令行中输入以下命令：</p>
-<pre><code class="language-bash"># 1. **解压刚刚下载的zip压缩包并进入文件夹
-unzip Timer.zip
-cd Timer
+<ol>
+<li>将解压好的文件夹命名为<code>Markhtml</code></li>
+<li>请将你需要转换的Markdown内容放到<code>$mark</code>这个变量中。</li>
+<li>在PHP文件中添加以下内容</li>
+</ol>
+<pre><code class="language-php">include &quot;markhtml/markhtml.php&quot;; //Head include
 
-# 2. 安装Timer
-bash install.sh
+$html = markhtml($mark);
 </code></pre>
-<h2 id="2-使用">2. 使用</h2>
-<p>在终端命令行内输入以下命令：</p>
-<pre><code class="language-bash">bash ~/timer.sh
-</code></pre>
-<p>进入程序后，按照提示输入设定秒数并等待。</p>
-<h2 id="3-debug">3. Debug</h2>
-<p>Error-01：您没有输入数字</p>
-<p>Error-02：您输入的不是有效数字（在某些版本中可能不会报错）</p>
-<p>Error-254：未知错误</p>
+<ol start="4">
+<li>此时的<code>$html</code>变量中就存储这转好的HTML代码。</li>
+</ol>
+<p>Made by LanGongINC</p>
 
             </div>
             
@@ -155,9 +144,9 @@ bash install.sh
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://langonginc.github.io/datacreater/">
+                <a href="https://langonginc.github.io/bingwallpaper/">
                   <h3 class="post-title">
-                    DataCreater
+                    BingWallPaper-downloader
                   </h3>
                 </a>
               </div>
