@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://langonginc.github.io</id>
     <title>LanGong</title>
-    <updated>2020-04-18T03:07:29.614Z</updated>
+    <updated>2020-04-18T03:53:33.341Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://langonginc.github.io"/>
     <link rel="self" href="https://langonginc.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://langonginc.github.io/images/avatar.png</logo>
     <icon>https://langonginc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, LanGong</rights>
+    <entry>
+        <title type="html"><![CDATA[Music163-Downloader-CH]]></title>
+        <id>https://langonginc.github.io/music163-CH/</id>
+        <link href="https://langonginc.github.io/music163-CH/">
+        </link>
+        <updated>2020-04-18T03:43:56.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Music163Downloader-EN]]></title>
+        <id>https://langonginc.github.io/music163-en/</id>
+        <link href="https://langonginc.github.io/music163-en/">
+        </link>
+        <updated>2020-04-18T03:13:22.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于我们]]></title>
         <id>https://langonginc.github.io/about-ch/</id>
@@ -65,19 +79,5 @@
         <link href="https://langonginc.github.io/timer/">
         </link>
         <updated>2020-04-13T08:44:44.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DataCreater]]></title>
-        <id>https://langonginc.github.io/datacreater/</id>
-        <link href="https://langonginc.github.io/datacreater/">
-        </link>
-        <updated>2020-04-13T06:39:19.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[撞FuFu]]></title>
-        <id>https://langonginc.github.io/zff/</id>
-        <link href="https://langonginc.github.io/zff/">
-        </link>
-        <updated>2020-03-10T11:21:35.000Z</updated>
     </entry>
 </feed>
