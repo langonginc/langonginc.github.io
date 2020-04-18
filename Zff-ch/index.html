@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
-<link rel="shortcut icon" href="https://langonginc.github.io/favicon.ico?v=1587209223389">
+<link rel="shortcut icon" href="https://langonginc.github.io/favicon.ico?v=1587213407131">
 <link rel="stylesheet" href="https://langonginc.github.io/styles/main.css">
 
 
@@ -30,12 +30,13 @@
 
     <meta name="description" content="English? Click to English
 下载
+X86_64
 # Git 克隆
 git clone https://github.com/langong-dev/Zff.git
 
-运行
-# 英文
-cd ~/Zff &amp;&amp; ./zf..." />
+ARM
+# Git 克隆
+git clone ht..." />
     <meta name="keywords" content="zff,LanGongDEV" />
   </head>
   <body>
@@ -45,7 +46,7 @@ cd ~/Zff &amp;&amp; ./zf..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://langonginc.github.io">
-        <img src="https://langonginc.github.io/images/avatar.png?v=1587209223389" class="site-logo">
+        <img src="https://langonginc.github.io/images/avatar.png?v=1587213407131" class="site-logo">
         <h1 class="site-title">LanGong</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -116,8 +117,16 @@ cd ~/Zff &amp;&amp; ./zf..." />
             <div class="post-content" v-pre>
               <p><a href="/Zff-en/">English? Click to English</a></p>
 <h1 id="下载">下载</h1>
+<h2 id="x86_64">X86_64</h2>
 <pre><code class="language-bash"># Git 克隆
 git clone https://github.com/langong-dev/Zff.git
+</code></pre>
+<h2 id="arm">ARM</h2>
+<pre><code class="language-bash"># Git 克隆
+git clone https://github.com/langong-dev/Zff.git
+
+# 编译
+g++ zff_main_en.cpp -o zff-en &amp;&amp; g++ zff_main_ch.cpp -o zff-ch
 </code></pre>
 <h1 id="运行">运行</h1>
 <pre><code class="language-bash"># 英文
