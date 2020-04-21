@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>撞FuFu | LanGong</title>
+<title>LanFilePackage-简体中文 | LanGong</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -28,14 +28,13 @@
 
 
 
-    <meta name="description" content="撞FuFu
-下载方式
-立即下载Zff-Linux4.1
-立即下载Zff-Linux4.0
-立即下载Zff-Windows4.0
-撞FuFu 更新日志
-2020年 3月13日 ZFF-Linux4.1正式上线
-2020年 3月10日 ZFF-..." />
+    <meta name="description" content="LanFilePackage
+全名：LanGong File Station Package
+下载
+# Git 克隆
+git clone https://github.com/langong-dev/LanFilePackage.git
+
+..." />
     <meta name="keywords" content="LanGongDEV" />
   </head>
   <body>
@@ -107,28 +106,100 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">撞FuFu</h2>
-            <div class="post-date">2020-03-10</div>
+            <h2 class="post-title">LanFilePackage-简体中文</h2>
+            <div class="post-date">2020-04-21</div>
             
-              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/zff.png')">
+              <div class="feature-container" style="background-image: url('https://langonginc.github.io/post-images/LanFilePackage-ch.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <h1 id="撞fufu">撞FuFu</h1>
-<h3 id="下载方式">下载方式</h3>
-<p><a href="https://github.com/langonginc/zff-Linux/archive/Linux4.1.zip" download="LanGong-Zff-Linux4.1">立即下载Zff-Linux4.1</a><br>
-<a href="https://github.com/langonginc/zff/releases/download/Linux4.0/FuFu-Linux4.0.zip" download="LanGong-Zff-Linux4.0">立即下载Zff-Linux4.0</a><br>
-<a href="https://github.com/langonginc/zff/releases/download/Windows4.0/FuFu-Windows4.0.zip" download="LanGong-Zff-Windows4.0">立即下载Zff-Windows4.0</a></p>
-<h3 id="撞fufu-更新日志">撞FuFu 更新日志</h3>
-<pre><code>2020年 3月13日 ZFF-Linux4.1正式上线
-2020年 3月10日 ZFF-Windows4.0正式上线
-2020年 3月10日 ZFF-Linux4.0正式上线
-2020年 2月20日 ZFF3.1正式上线
-2020年 2月 1日 ZFF3.1正在测试
-2020年 1月10日 ZFF3.0正式版上线
+              <h1 id="lanfilepackage">LanFilePackage</h1>
+<p>全名：LanGong File Station Package</p>
+<h2 id="下载">下载</h2>
+<pre><code class="language-bash"># Git 克隆
+git clone https://github.com/langong-dev/LanFilePackage.git
 </code></pre>
-<h3 id="wiki">Wiki</h3>
-<p><a href="https://github.com/langonginc/zff/wiki/">Wiki</a></p>
+<h2 id="使用">使用</h2>
+<pre><code class="language-bash"># 进入那个文件夹
+cd ~/&lt;FOLDER&gt;
+
+# 运行
+./ LanGong &lt;Type&gt; &lt;Class&gt; &lt;Name&gt;
+</code></pre>
+<h3 id="命令大全">命令大全</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令Type</th>
+<th style="text-align:center">Class</th>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">意思</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">install</td>
+<td style="text-align:center">github</td>
+<td style="text-align:center">&lt; PackageUser &gt;/&lt; PackageName &gt;</td>
+<td style="text-align:center">下载GitHub上的软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">install</td>
+<td style="text-align:center">langonggit</td>
+<td style="text-align:center">&lt; PackageName&gt;</td>
+<td style="text-align:center">下载蓝光在线软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">install</td>
+<td style="text-align:center">git</td>
+<td style="text-align:center">&lt; PackageURL &gt;</td>
+<td style="text-align:center">下载网络上Git的软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">run</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">&lt; PackageName &gt;</td>
+<td style="text-align:center">运行你所下载的软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">ls</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">查看安装的所有软件包</td>
+</tr>
+</tbody>
+</table>
+<h3 id="使用示例">使用示例</h3>
+<ul>
+<li>Install Github : langong-dev/Zff</li>
+</ul>
+<pre><code class="language-bash">./LanGong install github langong-dev/Zff
+</code></pre>
+<ul>
+<li>Install Git : https://github.com/langonginc/Zff.git</li>
+</ul>
+<pre><code class="language-bash">./LanGong install git https://github.com/langonginc/Zff.git
+</code></pre>
+<ul>
+<li>运行 Zff</li>
+</ul>
+<pre><code class="language-bash">./LanGong run Zff
+</code></pre>
+<ul>
+<li>查看所有软件包</li>
+</ul>
+<pre><code class="language-bash">./LanGong ls
+</code></pre>
+<h2 id="投稿">投稿</h2>
+<p>投稿可以发送到<code>langonginc@yeah.net</code>。</p>
+<p>您的文件需要包含一个路由文件<code>in.index</code>，作用是运行时找到程序入口，文件格式如下（bash语法）</p>
+<pre><code class="language-bash">fun(){
+    ./&lt;你的程序入口&gt;
+}
+</code></pre>
+<p>请将您的软件包的所有文件直接打包成<code>.zip</code>格式的压缩包。</p>
+<p>说明软件包名称、描述。</p>
+<p>我们会为您添加到LanFilePackage上的。</p>
 
             </div>
             
@@ -140,6 +211,15 @@
                 
               </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://langonginc.github.io/Zff-en/">
+                  <h3 class="post-title">
+                    Zff-EN
+                  </h3>
+                </a>
+              </div>
             
 
             
