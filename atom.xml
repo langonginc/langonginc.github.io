@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://langonginc.github.io</id>
     <title>LanGong</title>
-    <updated>2020-04-23T03:48:32.959Z</updated>
+    <updated>2020-04-23T12:17:22.449Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://langonginc.github.io"/>
     <link rel="self" href="https://langonginc.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://langonginc.github.io/images/avatar.png</logo>
     <icon>https://langonginc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, LanGong</rights>
+    <entry>
+        <title type="html"><![CDATA[[2020 APR] LanGong Top News]]></title>
+        <id>https://langonginc.github.io/Topnew202004/</id>
+        <link href="https://langonginc.github.io/Topnew202004/">
+        </link>
+        <updated>2020-04-30T15:59:59.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[LanFilePackage-English]]></title>
         <id>https://langonginc.github.io/LanFilePackage-en/</id>
@@ -72,12 +79,5 @@
         <link href="https://langonginc.github.io/markhtml/">
         </link>
         <updated>2020-04-17T11:15:18.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BingWallPaper-downloader]]></title>
-        <id>https://langonginc.github.io/bingwallpaper/</id>
-        <link href="https://langonginc.github.io/bingwallpaper/">
-        </link>
-        <updated>2020-04-17T09:54:52.000Z</updated>
     </entry>
 </feed>
